@@ -34,9 +34,9 @@ public class caseMethodBeasiswa {
                     while (true) {
                         System.out.print("Jenis Beasiswa (Reguler/Unggulan/Riset): ");
                         jenisBeasiswa[totalData] = sc.nextLine();
-                        if (jenisBeasiswa[totalData].equalsIgnoreCase("Reguler") || 
-                            jenisBeasiswa[totalData].equalsIgnoreCase("Unggulan") || 
-                            jenisBeasiswa[totalData].equalsIgnoreCase("Riset")) {
+                        if (jenisBeasiswa[totalData].equalsIgnoreCase("Reguler") ||
+                                jenisBeasiswa[totalData].equalsIgnoreCase("Unggulan") ||
+                                jenisBeasiswa[totalData].equalsIgnoreCase("Riset")) {
                             break;
                         } else {
                             System.out.println("Input salah! Hanya boleh Reguler, Unggulan, atau Riset.");
@@ -46,8 +46,12 @@ public class caseMethodBeasiswa {
                     System.out.print("Penghasilan Orang Tua (maksimal 2000000): ");
                     penghasilanOrtu[totalData] = sc.nextInt();
 
-                    totalData++;
-                    System.out.println("Pendaftar berhasil disimpan. Total pendaftar: " + totalData);
+                    if (penghasilanOrtu[totalData] > 2000000) {
+                        System.out.println("Pendaftaran dibatalkan karena penghasilan melebihi batas maksimal.");
+                    } else {
+                        totalData++;
+                        System.out.println("Pendaftar berhasil disimpan. Total pendaftar: " + totalData);
+                    }
                     break;
                 case 2:
                     break;
