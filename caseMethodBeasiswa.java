@@ -35,4 +35,13 @@ public class caseMethodBeasiswa {
             }
         }
     }
+    public static void tampilMenu() {
+        System.out.println();
+        System.out.println("=== Sistem Pendaftaran Beasiswa ===");
+        System.out.println("1. Tambah Data Pendaftar Beasiswa");
+        System.out.println("2. Tampilkan Semua Pendaftar");
+        System.out.println("3. Cari Pendaftar berdasarkan Jenis Beasiswa");
+        System.out.println("4. Hitung rata-rata IPK per Jenis Beasiswa");
+        System.out.println("5. Keluar");
+    }
 }
