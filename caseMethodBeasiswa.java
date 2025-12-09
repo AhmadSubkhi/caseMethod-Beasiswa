@@ -54,6 +54,18 @@ public class caseMethodBeasiswa {
                     }
                     break;
                 case 2:
+                    System.out.println(
+                            "------------------------------------------------------------------------------------------");
+                    System.out.printf("| %-20s | %-12s | %-5s | %-10s | %-15s |\n", "Nama", "NIM", "IPK", "Beasiswa",
+                            "Gaji Ortu");
+                    System.out.println(
+                            "------------------------------------------------------------------------------------------");
+                    for (int i = 0; i < totalData; i++) {
+                        System.out.printf("| %-20s | %-12d | %-5.2f | %-10s | %-15d |\n",
+                                namaMahasiswa[i], NIM[i], IPK[i], jenisBeasiswa[i], penghasilanOrtu[i]);
+                    }
+                    System.out.println(
+                            "------------------------------------------------------------------------------------------");
                     break;
                 case 3:
                     break;
