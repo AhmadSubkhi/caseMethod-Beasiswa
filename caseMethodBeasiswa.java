@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class caseMethodBeasiswa {
     public static void main(String[] args) {
-        Scanner sc = new Scanner (System.in);
+        Scanner sc = new Scanner(System.in);
         String[] namaMahasiswa = new String[100];
         long[] NIM = new long[100];
         float[] IPK = new float[100];
@@ -19,6 +19,23 @@ public class caseMethodBeasiswa {
 
             switch (pilihMenu) {
                 case 1:
+
+                    System.out.print("Nama Mahasiswa: ");
+                    namaMahasiswa[totalData] = sc.nextLine();
+
+                    System.out.print("NIM: ");
+                    NIM[totalData] = sc.nextLong();
+                    sc.nextLine();
+
+                    System.out.print("IPK terakhir: ");
+                    IPK[totalData] = sc.nextFloat();
+                    sc.nextLine();
+
+                    System.out.print("Jenis Beasiswa (Reguler/Unggulan/Riset): ");
+                    jenisBeasiswa[totalData] = sc.nextLine();
+
+                    System.out.print("Penghasilan Orang Tua (maksimal 2000000): ");
+                    penghasilanOrtu[totalData] = sc.nextInt();
                     break;
                 case 2:
                     break;
@@ -35,6 +52,7 @@ public class caseMethodBeasiswa {
             }
         }
     }
+
     public static void tampilMenu() {
         System.out.println();
         System.out.println("=== Sistem Pendaftaran Beasiswa ===");
