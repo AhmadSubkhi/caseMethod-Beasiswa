@@ -2,8 +2,8 @@ import java.util.Scanner;
 
 public class caseMethodBeasiswa {
     static String[] namaMahasiswa = new String[100];
-    static long[] NIM = new long[100];
-    static float[] IPK = new float[100];
+    static long[] nim = new long[100];
+    static float[] ipk = new float[100];
     static String[] jenisBeasiswa = new String[100];
     static int[] penghasilanOrtu = new int[100];
     static int totalData = 0;
@@ -56,11 +56,11 @@ public class caseMethodBeasiswa {
         namaMahasiswa[totalData] = sc.nextLine();
 
         System.out.print("NIM: ");
-        NIM[totalData] = sc.nextLong();
+        nim[totalData] = sc.nextLong();
         sc.nextLine();
 
         System.out.print("IPK terakhir: ");
-        IPK[totalData] = sc.nextFloat(); 
+        ipk[totalData] = sc.nextFloat(); 
         sc.nextLine();
 
         while (true) {
@@ -97,7 +97,7 @@ public class caseMethodBeasiswa {
         System.out.println("------------------------------------------------------------------------------------------");
         for (int i = 0; i < totalData; i++) {
             System.out.printf("| %-20s | %-12d | %-5.2f | %-10s | %-15d |\n", 
-                namaMahasiswa[i], NIM[i], IPK[i], jenisBeasiswa[i], penghasilanOrtu[i]);
+                namaMahasiswa[i], nim[i], ipk[i], jenisBeasiswa[i], penghasilanOrtu[i]);
         }
         System.out.println("------------------------------------------------------------------------------------------");
     }
@@ -119,8 +119,8 @@ public class caseMethodBeasiswa {
             if (jenisBeasiswa[i].equalsIgnoreCase(cari)  ) {
                 System.out.println();
                 System.out.println("Nama Mahasiswa: " + namaMahasiswa[i]);
-                System.out.println("NIM: " + NIM[i]);
-                System.out.println("IPK terakhir: " + IPK[i]);
+                System.out.println("NIM: " + nim[i]);
+                System.out.println("IPK terakhir: " + ipk[i]);
                 System.out.println("Jenis Beasiswa: " + jenisBeasiswa[i]);
                 System.out.println("Penghasilan Orang Tua: " + penghasilanOrtu[i]);                           
                     
@@ -137,22 +137,22 @@ public class caseMethodBeasiswa {
             System.out.println("Belum ada pendaftar.");
             return;
         }
-        
+
         double totalIpkReguler = 0, totalIpkUnggulan = 0, totalIpkRiset = 0;
         int countReguler = 0, countUnggulan = 0, countRiset = 0;
 
         for (int i = 0; i < totalData; i++) {
             
             if (jenisBeasiswa[i].equalsIgnoreCase("Reguler")) {
-                totalIpkReguler += IPK[i]; // Tambahkan IPK ke wadah total
+                totalIpkReguler += ipk[i]; // Tambahkan IPK ke wadah total
                 countReguler++;            // Hitung orangnya
             } 
             else if (jenisBeasiswa[i].equalsIgnoreCase("Unggulan")) {
-                totalIpkUnggulan += IPK[i];
+                totalIpkUnggulan += ipk[i];
                 countUnggulan++;
             }
             else if (jenisBeasiswa[i].equalsIgnoreCase("Riset")) {
-                totalIpkRiset += IPK[i];
+                totalIpkRiset += ipk[i];
                 countRiset++;
             }
         }
