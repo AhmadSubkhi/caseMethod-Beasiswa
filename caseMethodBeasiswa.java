@@ -115,21 +115,23 @@ public class caseMethodBeasiswa {
 
         boolean ditemukan = false;
 
+        System.out.println("------------------------------------------------------------------------------------------");
+                System.out.printf("| %-20s | %-12s | %-5s | %-10s | %-15s |\n", "Nama", "NIM", "IPK", "Beasiswa", "Gaji Ortu");
+                System.out.println("------------------------------------------------------------------------------------------");
+
+
         for (int i = 0; i < totalData; i++) {
             if (jenisBeasiswa[i].equalsIgnoreCase(cari)  ) {
-                System.out.println();
-                System.out.println("Nama Mahasiswa: " + namaMahasiswa[i]);
-                System.out.println("NIM: " + nim[i]);
-                System.out.println("IPK terakhir: " + ipk[i]);
-                System.out.println("Jenis Beasiswa: " + jenisBeasiswa[i]);
-                System.out.println("Penghasilan Orang Tua: " + penghasilanOrtu[i]);                           
-                    
+                System.out.printf("| %-20s | %-12d | %-5.2f | %-10s | %-15d |\n", 
+                namaMahasiswa[i], nim[i], ipk[i], jenisBeasiswa[i], penghasilanOrtu[i]);
+                
                 ditemukan = true;
             }
         }
         if (!ditemukan) {
             System.out.println("Pendaftar berdasarkan Jenis Beasiswa yang anda cari tidak ada!");
         }
+        System.out.println("------------------------------------------------------------------------------------------");                        
     }
 
     static void hitungAverage() {
