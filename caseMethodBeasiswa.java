@@ -68,6 +68,29 @@ public class caseMethodBeasiswa {
                             "------------------------------------------------------------------------------------------");
                     break;
                 case 3:
+                    String cari;
+
+                    sc.nextLine();
+                    System.out.print("Masukkan Jenis Beasiswa: "); 
+                    cari = sc.nextLine();   
+
+                    boolean ditemukan = false;
+
+                    for (int i = 0; i < totalData; i++) {
+                        if (jenisBeasiswa[i].equalsIgnoreCase(cari)  ) {
+                            System.out.println();
+                            System.out.println("Nama Mahasiswa: " + namaMahasiswa[i]);
+                            System.out.println("NIM: " + NIM[i]);
+                            System.out.println("IPK terakhir: " + IPK[i]);
+                            System.out.println("Jenis Beasiswa: " + jenisBeasiswa[i]);
+                            System.out.println("Penghasilan Orang Tua: " + penghasilanOrtu[i]);                           
+                                
+                            ditemukan = true;
+                        }
+                    }
+                    if (!ditemukan) {
+                        System.out.println("Pendaftar berdasarkan Jenis Beasiswa yang anda cari tidak ada!");
+                    }
                     break;
                 case 4:
                     break;
