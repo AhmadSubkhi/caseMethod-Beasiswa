@@ -71,20 +71,20 @@ public class caseMethodBeasiswa {
                     String cari;
 
                     sc.nextLine();
-                    System.out.print("Masukkan Jenis Beasiswa: "); 
-                    cari = sc.nextLine();   
+                    System.out.print("Masukkan Jenis Beasiswa: ");
+                    cari = sc.nextLine();
 
                     boolean ditemukan = false;
 
                     for (int i = 0; i < totalData; i++) {
-                        if (jenisBeasiswa[i].equalsIgnoreCase(cari)  ) {
+                        if (jenisBeasiswa[i].equalsIgnoreCase(cari)) {
                             System.out.println();
                             System.out.println("Nama Mahasiswa: " + namaMahasiswa[i]);
                             System.out.println("NIM: " + NIM[i]);
                             System.out.println("IPK terakhir: " + IPK[i]);
                             System.out.println("Jenis Beasiswa: " + jenisBeasiswa[i]);
-                            System.out.println("Penghasilan Orang Tua: " + penghasilanOrtu[i]);                           
-                                
+                            System.out.println("Penghasilan Orang Tua: " + penghasilanOrtu[i]);
+
                             ditemukan = true;
                         }
                     }
@@ -93,6 +93,22 @@ public class caseMethodBeasiswa {
                     }
                     break;
                 case 4:
+                    double totalIpkReguler = 0, totalIpkUnggulan = 0, totalIpkRiset = 0;
+                    int countReguler = 0, countUnggulan = 0, countRiset = 0;
+
+                    for (int i = 0; i < totalData; i++) {
+
+                        if (jenisBeasiswa[i].equalsIgnoreCase("Reguler")) {
+                            totalIpkReguler += IPK[i]; // Tambahkan IPK ke wadah total
+                            countReguler++; // Hitung orangnya
+                        } else if (jenisBeasiswa[i].equalsIgnoreCase("Unggulan")) {
+                            totalIpkUnggulan += IPK[i];
+                            countUnggulan++;
+                        } else if (jenisBeasiswa[i].equalsIgnoreCase("Riset")) {
+                            totalIpkRiset += IPK[i];
+                            countRiset++;
+                        }
+                    }
                     break;
                 case 5:
                     System.out.println("Anda keluar dari program....");
