@@ -87,7 +87,10 @@ public class caseMethodBeasiswa {
     }
 
     static void tampilSemuaPendaftar() {
-
+        if (totalData == 0) {
+            System.out.println("Belum ada pendaftar.");
+            return;
+        }
 
         System.out.println("------------------------------------------------------------------------------------------");
         System.out.printf("| %-20s | %-12s | %-5s | %-10s | %-15s |\n", "Nama", "NIM", "IPK", "Beasiswa", "Gaji Ortu");
@@ -102,7 +105,10 @@ public class caseMethodBeasiswa {
     static void cariPendaftar() {
         String cari;
 
-
+        if (totalData == 0) {
+            System.out.println("Belum ada pendaftar.");
+            return;
+        }
         sc.nextLine();
         System.out.print("Masukkan Jenis Beasiswa: "); 
         cari = sc.nextLine();   
@@ -127,7 +133,11 @@ public class caseMethodBeasiswa {
     }
 
     static void hitungAverage() {
-
+        if (totalData == 0) {
+            System.out.println("Belum ada pendaftar.");
+            return;
+        }
+        
         double totalIpkReguler = 0, totalIpkUnggulan = 0, totalIpkRiset = 0;
         int countReguler = 0, countUnggulan = 0, countRiset = 0;
 
