@@ -5,7 +5,7 @@ public class caseMethodBeasiswa {
     static long[] nim = new long[100];
     static float[] ipk = new float[100];
     static String[] jenisBeasiswa = new String[100];
-    static int[] penghasilanOrtu = new int[100];
+    static long[] penghasilanOrtu = new long[100];
     static int totalData = 0;
     static Scanner sc = new Scanner(System.in);
 
@@ -76,7 +76,7 @@ public class caseMethodBeasiswa {
         }
 
         System.out.print("Penghasilan Orang Tua (maksimal 2000000): ");
-        penghasilanOrtu[totalData] = sc.nextInt(); 
+        penghasilanOrtu[totalData] = sc.nextLong(); 
 
         if (penghasilanOrtu[totalData] > 2000000) {
             System.out.println("Pendaftaran dibatalkan karena penghasilan melebihi batas maksimal.");
@@ -109,7 +109,6 @@ public class caseMethodBeasiswa {
             System.out.println("Belum ada pendaftar.");
             return;
         }
-        sc.nextLine();
         System.out.print("Masukkan Jenis Beasiswa: "); 
         cari = sc.nextLine();   
 
@@ -163,24 +162,24 @@ public class caseMethodBeasiswa {
 
         if (countReguler > 0) {
             double rataReguler = totalIpkReguler / countReguler;
-            System.out.println("Reguler  : rata-rata IPK = " + rataReguler);
+            System.out.printf("Reguler  : rata-rata IPK = %.2f" , rataReguler);
         } else {
             System.out.println("Reguler  : Tidak ada data.");
         }
 
         if (countUnggulan > 0) {
             double rataUnggulan = totalIpkUnggulan / countUnggulan;
-            System.out.println("Unggulan : rata-rata IPK = " + rataUnggulan);
+            System.out.printf("Unggulan : rata-rata IPK = %.2f" , rataUnggulan);
         } else {
             System.out.println("Unggulan : Tidak ada data.");
         }
         
         if (countRiset > 0) {
             double rataRiset = totalIpkRiset / countRiset;
-            System.out.println("Riset    : rata-rata IPK = " + rataRiset);
+            System.out.printf("Riset    : rata-rata IPK = %.2f" , rataRiset);
         } else {
             System.out.println("Riset    : Tidak ada data.");
         }  
-
+        System.out.println();
     }
 }
