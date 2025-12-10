@@ -109,6 +109,28 @@ public class caseMethodBeasiswa {
                             countRiset++;
                         }
                     }
+                    System.out.println("--- Laporan Rata-rata IPK ---");
+
+                    if (countReguler > 0) {
+                        double rataReguler = totalIpkReguler / countReguler;
+                        System.out.println("Reguler  : rata-rata IPK = " + rataReguler);
+                    } else {
+                        System.out.println("Reguler  : Tidak ada data.");
+                    }
+
+                    if (countUnggulan > 0) {
+                        double rataUnggulan = totalIpkUnggulan / countUnggulan;
+                        System.out.println("Unggulan : rata-rata IPK = " + rataUnggulan);
+                    } else {
+                        System.out.println("Unggulan : Tidak ada data.");
+                    }
+
+                    if (countRiset > 0) {
+                        double rataRiset = totalIpkRiset / countRiset;
+                        System.out.println("Riset    : rata-rata IPK = " + rataRiset);
+                    } else {
+                        System.out.println("Riset    : Tidak ada data.");
+                    }
                     break;
                 case 5:
                     System.out.println("Anda keluar dari program....");
